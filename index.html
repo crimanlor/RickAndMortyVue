@@ -16,19 +16,36 @@
 <body>
     <div id="app">
         <h1>{{ mensaje }}</h1>
-        <div>
-            <h4>Pregunta</h4>
-            <b-button-group size="sm">
-                <b-button
-                  v-for="(btn, idx) in buttons"
-                  :key="idx"
-                  :pressed.sync="btn.state"
-                  variant="primary"
-                >
-                  {{ btn.caption }}
-                </b-button>
-              </b-button-group>
-        </div>
+        <b-carousel
+            id="carousel-1"
+            v-model="slide"
+            :interval="4000"
+            controls
+            indicators
+            background="#ababab"
+            img-width="1024"
+            img-height="480"
+            style="text-shadow: 1px 1px 2px #333;"
+            @sliding-start="onSlideStart"
+            @sliding-end="onSlideEnd">
+            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+                <div>
+                    <h4>Pregunta</h4>
+                    <b-form-group label="Stacked (vertical) button-group style checkboxes">
+                        <b-form-checkbox-group
+                        v-model="selected"
+                        :options="options"
+                        stacked
+                        buttons
+                        ></b-form-checkbox-group>
+                    </b-form-group>
+
+                </div>
+
+            </b-carousel-slide>
+            
+        </b-carousel>
+    </div>
         <div>
             <img src="" alt="green circle">
         </div>

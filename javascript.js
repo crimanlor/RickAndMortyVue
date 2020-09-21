@@ -5,16 +5,23 @@ const app = new Vue ({
     data(){
         return {
             mensaje: 'Discover your character...',
-            buttons: [
-                { caption: 'Toggle 1', state: true },
-                { caption: 'Toggle 2', state: false },
-                { caption: 'Toggle 3', state: false }
-              ]
+            selected: [],
+            options: [
+                { text: 'Orange', value: 'orange' },
+                { text: 'Apple', value: 'apple' },
+                { text: 'Pineapple', value: 'pineapple' },
+                { text: 'Grape', value: 'grape' }
+            ],
+            slide: 0,
+            sliding: null
         }
     },
-    computed: {
-        btnStates() {
-          return this.buttons.map(btn => btn.state)
+    methods: {
+        onSlideStart(slide) {
+          this.sliding = true
+        },
+        onSlideEnd(slide) {
+          this.sliding = false
         }
       }
 })
