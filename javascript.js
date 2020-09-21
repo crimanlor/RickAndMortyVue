@@ -4,7 +4,7 @@ const app = new Vue ({
     el: '#app',
     data(){
         return {
-            mensaje: 'Hola Vue!'
+            mensaje: 'Discover your character...'
         }
     }
 })
