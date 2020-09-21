@@ -1,0 +1,27 @@
+1	Morty Smith.
+2	Jerry Smith.
+3	Beth Smith.
+4	Summer Smith.
+5	Rick malvado.
+6	Morty malvado.
+7	Sr. Pantalones de Popó
+8	jessica 
+9	Rick Pepinillo
+10	Meeseeks
+11	Hombre pajaro
+12	Bola de Nieve(perro)
+13	cromulons
+14	gazorpazorfiel
+15	snuffles
+16	squanchy
+18	pies de bebé
+19	pencilvester
+20	abradolf lincler
+21	minirick
+22	Prisionero babosa
+23	Rick sanches(D-99)
+24	Krombopulos Michael
+25	Rick normal
+26	Frank Palicky
+27	Blim Blam el Clorblock
+	
