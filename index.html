@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Rick and Morty</title>
 </head>
 <body>
@@ -15,17 +20,21 @@
         <h1>{{ mensaje }}</h1>
         <div>
             <h4>Pregunta</h4>
-            <ul>
-                <li>Respuesta</li>
-                <li>Respuesta</li>
-                <li>Respuesta</li>
-            </ul>
+            <b-button-group size="sm">
+                <b-button
+                  v-for="(btn, idx) in buttons"
+                  :key="idx"
+                  :pressed.sync="btn.state"
+                  variant="primary"
+                >
+                  {{ btn.caption }}
+                </b-button>
+              </b-button-group>
         </div>
         <div>
             <img src="" alt="green circle">
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="javascript.js"></script>
 </body>
 </html>
