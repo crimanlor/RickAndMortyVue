@@ -13,9 +13,9 @@ const app = new Vue ({
             ],
             answers: [
               [
-                  { text: 'Respuesta a1', value: 0 },
-                  { text: 'Respuesta a2', value: 1 },
-                  { text: 'Respuesta a3', value: 2 }
+                { text: 'Respuesta a1', value: 0 },
+                { text: 'Respuesta a2', value: 1 },
+                { text: 'Respuesta a3', value: 2 }
               ],
               [
                 { text: 'Respuesta b1', value: 0 },
