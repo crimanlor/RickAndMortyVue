@@ -6,7 +6,7 @@ $tertiary-color: rgba(0, 0, 0, 0.8);
 
 //////////Tipografía//////////
 
-$principal-font: 'Ruluko', sans-serif;
+$principal-font: unquote('Ruluko'), sans-serif;
 $font-size-subtitle: 3em;
 $font-size-question: 1.25em;
 $font-size-answer: 1em;

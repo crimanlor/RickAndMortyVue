@@ -15,8 +15,8 @@
 </head>
 <body>
     <div id="app">
-        <div>
-          <img src="images/logo.svg" alt="logo">
+        <div id="logo-container">
+          <img src="images/logo.svg" alt="logo" id="logo-img">
         </div>
         <h1>{{ mensaje }}</h1>
         <b-carousel
@@ -26,9 +26,8 @@
             :interval="0"
             controls
             indicators
-            background="#ababab"
-            img-width="200"
-            img-height="100"
+            img-width="1024"
+            img-height="480"
             style="text-shadow: 1px 1px 2px #333;"
             @sliding-start="onSlideStart"
             @sliding-end="onSlideEnd">
@@ -58,8 +57,8 @@
             </b-carousel-slide>
         </b-carousel>
     </div>
-        <div>
-            <img src="images/vortex.png" alt="vortex">
+        <div id="vortex-container">
+            <img src="images/vortex.png" alt="vortex" id="vortex-img">
         </div>
     </div>
     <script src="javascript.js"></script>

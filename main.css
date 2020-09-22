@@ -5,8 +5,12 @@ body {
 }
 
 #logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
 }
 
@@ -22,8 +26,12 @@ body {
 }
 
 #vortex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 4em;
 }
 
@@ -31,5 +39,4 @@ body {
   width: 40em;
   height: 40em;
 }
-
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=main.css.map */

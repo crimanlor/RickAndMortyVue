@@ -1,5 +1,8 @@
+@charset 'utf-8';
+@import 'variables';
+
 body {
-  background-image: url("images/background_stars.png");
+  background-image: url('images/background_stars.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -16,8 +19,8 @@ body {
 }
 
 #carousel-1 {
-  background: rgba(0, 0, 0, 0.8);
-  border: 1px solid #60ef21;
+  background: $tertiary-color;
+  border: 1px solid $primary-color;
   border-radius: 50px;
 }
 
@@ -31,5 +34,3 @@ body {
   width: 40em;
   height: 40em;
 }
-
-/*# sourceMappingURL=styles.css.map */
