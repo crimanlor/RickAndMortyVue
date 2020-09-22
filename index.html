@@ -20,33 +20,42 @@
         </div>
         <h1>{{ mensaje }}</h1>
         <b-carousel
+            ref="myCarousel"
             id="carousel-1"
             v-model="slide"
-            :interval="4000"
+            :interval="0"
             controls
             indicators
             background="#ababab"
-            img-width="1024"
-            img-height="480"
+            img-width="200"
+            img-height="100"
             style="text-shadow: 1px 1px 2px #333;"
             @sliding-start="onSlideStart"
             @sliding-end="onSlideEnd">
-            <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
+            <b-carousel-slide 
+                v-for="(question, index) in questions" 
+                img-blank 
+                img-alt="Blank image">
                 <div>
-                    <h4>Pregunta</h4>
-                    <b-form-group label="Stacked (vertical) button-group style checkboxes">
-                        <b-form-checkbox-group
-                        v-model="selected"
-                        :options="options"
+                    <b-form-group :label="question">
+                        <b-form-radio-group
+                        v-model="selected[index]"
                         stacked
                         buttons
-                        ></b-form-checkbox-group>
+                        >
+                            <b-form-radio v-for="(answer, index) in answers[index]" @mouseup.native="next()" :value="answer.value">{{ answer.text }}</b-form-radio>
+                        </b-form-radio-group>
                     </b-form-group>
-
                 </div>
-
             </b-carousel-slide>
-            
+            <b-carousel-slide 
+                img-blank 
+                img-alt="Blank image">
+                <div>
+                    <p>Texto para confirmar finalización o lo que sea</p>
+                    <button id="sendAnswersButton">Enviar</button>
+                </div>
+            </b-carousel-slide>
         </b-carousel>
     </div>
         <div>
