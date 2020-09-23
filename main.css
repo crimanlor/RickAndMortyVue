@@ -19,10 +19,30 @@ body {
   width: 53em;
 }
 
+#app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #carousel-1 {
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid #60ef21;
   border-radius: 50px;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #vortex-container {
@@ -33,10 +53,31 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 4em;
+  z-index: auto;
 }
 
 #vortex-img {
-  width: 40em;
-  height: 40em;
+  width: 25em;
+  height: 25em;
+  position: absolute;
+  z-index: 1;
+}
+
+#rick-dummie {
+  position: relative;
+  width: 25em;
+  z-index: 2;
+}
+
+.boton-prueba {
+  color: red !important;
+}
+
+b-carousel-slide p {
+  color: red !important;
+}
+
+b-form-group label {
+  font-family: "Courier New", Courier, monospace !important;
 }
 /*# sourceMappingURL=main.css.map */
