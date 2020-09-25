@@ -42,6 +42,9 @@ const app = new Vue ({
       },
       next() {
         this.$refs.myCarousel.next();
+      },
+      restartCarousel(index){
+        this.$refs.myCarousel.setSlide(index);
       }
     },
     mounted(){
@@ -63,6 +66,15 @@ const app = new Vue ({
         }
         
       });
+
+      document.querySelector('#restartButton').addEventListener('click', () =>{
+        this.selected = [];
+        this.mensaje = "Discover your character (again)...";
+        document.querySelector('#carousel-1').style.display = 'flex';
+        document.querySelector('#container-vortex-container').style.display = 'none';
+        this.restartCarousel(0);
+      });
+
       function translateAnswerToDecimal(answerArray){
         answerArray.reverse();
         let numeroDecimal = 1; //API characters start at 1, so we start at 1 to avoid 0 result.
@@ -75,7 +87,7 @@ const app = new Vue ({
       
       function showCharacter(){
         document.querySelector('#carousel-1').style.display = 'none';
-        document.querySelector('#vortex-container').style.display = 'flex';
+        document.querySelector('#container-vortex-container').style.display = 'flex';
       }
     }
 })

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
@@ -28,7 +28,7 @@
             controls
             indicators
             img-width="1024"
-            img-height="480"
+            img-height="250"
             @sliding-start="onSlideStart"
             @sliding-end="onSlideEnd">
             <b-carousel-slide 
@@ -36,7 +36,7 @@
                 img-blank 
                 img-alt="Blank image">
                 <div>
-                    <b-form-group :label="question">
+                    <b-form-group :label="question" id="grupoPreguntas">
                         <b-form-radio-group 
                         v-model="selected[index]"
                         stacked
@@ -55,9 +55,12 @@
                 </div>
             </b-carousel-slide>
         </b-carousel>
-        <div id="vortex-container">
-            <img :src="characterImage" alt="character" id="character">
-            <img src="images/vortex.png" alt="vortex" id="vortex-img">
+        <div id="container-vortex-container">
+            <div id="vortex-container">
+                <img :src="characterImage" alt="character" id="character">
+                <img src="images/vortex.png" alt="vortex" id="vortex-img"> 
+            </div>
+            <button id="restartButton">Volver a jugar</button>
         </div>
     </div>
     </div>
