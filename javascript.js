@@ -1,5 +1,5 @@
 'use strict'
-
+   
 const app = new Vue ({
     el: '#app',
     data(){
@@ -8,25 +8,25 @@ const app = new Vue ({
             characterImage: '',
             selected: [],
             questions: [
-              'Pregunta 1',
-              'Pregunta 2',
-              'Pregunta 3'
+              '1. ¿Para que sirve Plumbus?',
+              '2. ¿Conoces el efecto secundario de la inserción rectal de mega-semillas?',
+              '3. ¿Qué es una batería microversal?'
             ],
             answers: [
               [
-                { text: 'Respuesta a1', value: 0 },
-                { text: 'Respuesta a2', value: 1 },
-                { text: 'Respuesta a3', value: 2 }
+                { text: 'Nuevo y útil método lavaplatos', value: 0 },
+                { text: 'Aparato sexual/satisfactorio intergaláctico', value: 1 },
+                { text: 'Arma de destrucción masiva para dominar cualquier galaxia', value: 2 }
               ],
               [
-                { text: 'Respuesta b1', value: 0 },
-                { text: 'Respuesta b2', value: 1 },
-                { text: 'Respuesta b3', value: 2 }
+                { text: 'Super inteligencia temporal con muy posible parálisis cerebral', value: 0 },
+                { text: 'Conversión del recto en propulsor espacial', value: 1 },
+                { text: 'Combustión espontánea', value: 2 }
               ],
               [
-                { text: 'Respuesta c1', value: 0 },
-                { text: 'Respuesta c2', value: 1 },
-                { text: 'Respuesta c3', value: 2 }
+                { text: 'Es una puerta a otras dimensiones', value: 0 },
+                { text: 'Recoge la energía generada por una civilización creando un universo artificial', value: 1 },
+                { text: 'Fue creada por Pepinillo Rick, para generar flatulencias', value: 2 }
               ],
             ],
             slide: 0,
@@ -57,6 +57,7 @@ const app = new Vue ({
             .then(response => {
               console.log(response.data);
               this.characterImage = response.data.image;
+              this.mensaje="Your character is: " + response.data.name;
               showCharacter();
             });
         }

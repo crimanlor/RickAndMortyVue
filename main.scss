@@ -7,6 +7,27 @@ body {
   background-size: cover;
 }
 
+h1 {
+  color: $primary-color;
+  font-family: $principal-font;
+}
+
+p {
+  color: $primary-color;
+  font-family: $principal-font;
+  font-size: 1.5em;
+}
+
+#sendAnswersButton {
+  border-radius: 1em;
+  background-color: $primary-color;
+  font-family: $principal-font;
+  font-size: 1.5em;
+  color: $tertiary-color;
+  padding: 0 1em;
+
+}
+
 #logo-container {
   display: flex;
   justify-content: center;
@@ -36,6 +57,7 @@ body {
 #vortex-container {
   display: none;
   justify-content: center;
+  align-items: center;
   padding: 4em;
   z-index: auto;
 }
@@ -47,10 +69,11 @@ body {
   z-index: 1;
 }
 
-#rick-dummie {
+#character {
   position: relative;
-  width: 25em;
+  width: 20em;
   z-index: 2;
+  border-radius: 10em;
 }
 
 

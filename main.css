@@ -4,6 +4,26 @@ body {
   background-size: cover;
 }
 
+h1 {
+  color: #60ef21;
+  font-family: Ruluko, sans-serif;
+}
+
+p {
+  color: #60ef21;
+  font-family: Ruluko, sans-serif;
+  font-size: 1.5em;
+}
+
+#sendAnswersButton {
+  border-radius: 1em;
+  background-color: #60ef21;
+  font-family: Ruluko, sans-serif;
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 0 1em;
+}
+
 #logo-container {
   display: flex;
   justify-content: center;
@@ -33,6 +53,7 @@ body {
 #vortex-container {
   display: none;
   justify-content: center;
+  align-items: center;
   padding: 4em;
   z-index: auto;
 }
@@ -44,10 +65,11 @@ body {
   z-index: 1;
 }
 
-#rick-dummie {
+#character {
   position: relative;
-  width: 25em;
+  width: 20em;
   z-index: 2;
+  border-radius: 10em;
 }
 
 .boton-prueba {
