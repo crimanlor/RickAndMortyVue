@@ -50,13 +50,23 @@ const app = new Vue ({
         }
         else {
           console.log(this.selected);
+          let decimalAnswer= translateAnswerToDecimal(this.selected);
           axios
-            .get('https://rickandmortyapi.com/api/character/1')
+            .get(`https://rickandmortyapi.com/api/character/${decimalAnswer}`)
             .then(response => {
               console.log(response.data);
             });
         }
         
       });
+      function translateAnswerToDecimal(answerArray){
+        answerArray.reverse();
+        let numeroDecimal = 1; //API characters start at 1, so we start at 1 to avoid 0 result.
+        for(let i = 0; i < answerArray.length; i++){
+          numeroDecimal += answerArray[i]*Math.pow(3, i);
+        }
+        console.log(numeroDecimal);
+        return numeroDecimal;
+      }
     }
 })
