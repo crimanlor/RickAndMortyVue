@@ -60,7 +60,7 @@ const app = new Vue ({
               showCharacter();
             });
         }
-
+        
       });
       function translateAnswerToDecimal(answerArray){
         answerArray.reverse();
@@ -71,7 +71,7 @@ const app = new Vue ({
         console.log(numeroDecimal);
         return numeroDecimal;
       }
-
+      
       function showCharacter(){
         document.querySelector('#carousel-1').style.display = 'none';
         document.querySelector('#vortex-container').style.display = 'flex';
