@@ -15,25 +15,50 @@ body {
   width: 53em;
 }
 
+#app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 #carousel-1 {
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid #60ef21;
   border-radius: 50px;
+  width: 70%;
+  display: flex;
 }
 
 #vortex-container {
-  display: flex;
+  display: none;
   justify-content: center;
   padding: 4em;
+  z-index: auto;
 }
 
 #vortex-img {
-  width: 40em;
-  height: 40em;
+  width: 25em;
+  height: 25em;
+  position: absolute;
+  z-index: 1;
+}
+
+#rick-dummie {
+  position: relative;
+  width: 25em;
+  z-index: 2;
 }
 
 .boton-prueba {
-  background-color: red;
+  color: red !important;
+}
+b-carousel-slide p {
+  color: red !important;
+}
+
+b-form-group label {
+  font-family: "Courier New", Courier, monospace !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

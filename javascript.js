@@ -5,6 +5,7 @@ const app = new Vue ({
     data(){
         return {
             mensaje: 'Discover your character...',
+            characterImage: '',
             selected: [],
             questions: [
               'Pregunta 1',
@@ -55,9 +56,11 @@ const app = new Vue ({
             .get(`https://rickandmortyapi.com/api/character/${decimalAnswer}`)
             .then(response => {
               console.log(response.data);
+              this.characterImage = response.data.image;
+              showCharacter();
             });
         }
-        
+
       });
       function translateAnswerToDecimal(answerArray){
         answerArray.reverse();
@@ -68,5 +71,14 @@ const app = new Vue ({
         console.log(numeroDecimal);
         return numeroDecimal;
       }
+
+      function showCharacter(){
+        document.querySelector('#carousel-1').style.display = 'none';
+        document.querySelector('#vortex-container').style.display = 'flex';
+      }
     }
 })
+// function returnUrl() {
+//   console.log(this.characterImage);
+//   return this.characterImage;
+// }
