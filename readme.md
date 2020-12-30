@@ -31,7 +31,7 @@ Solo necesitas tu **editor de código** y **navegador favoritos**. Nosotros hemo
 
 ---
 
-https://you-are-rick-and-morty-character.netlify.app/
+https://you-are-a-rick-and-morty-character.netlify.app/
 
 ### Colaboradores 🙌🏼
 
