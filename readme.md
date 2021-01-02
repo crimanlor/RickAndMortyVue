@@ -37,8 +37,8 @@ https://you-are-a-rick-and-morty-character.netlify.app/
 
 ---
 
-[MaxPower](https://github.com/MaxPowerReforged)
-[Lorena](https://github.com/crimanlor)
+- [MaxPower](https://github.com/MaxPowerReforged)
+- [Lorena](https://github.com/crimanlor)
 
 ### Agradecimientos 🎁
 
